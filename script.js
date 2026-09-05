@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Sync phone number across all call links & badges
   const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
   phoneLinks.forEach(link => {
-    link.setAttribute('href', 	el:);
+    link.setAttribute('href', `tel:${PHONE_NUMBER}`);
   });
 
   const headerPhoneBadge = document.querySelector('.top-header-phone-badge');
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentIndex = index;
 
     if (track) {
-      track.style.transform = 	ranslateX(-%);
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 
     dots.forEach((dot, i) => {
