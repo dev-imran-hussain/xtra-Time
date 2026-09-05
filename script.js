@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- 1. GLOBAL PHONE NUMBER CONFIGURATION ---
   // Aap yaha apna phone number change kar sakte hain, puri website par automatically update ho jayega!
-  const PHONE_NUMBER = "07313131313";          // Dialing number (bina space ke)
-  const PHONE_DISPLAY = "07 31 31 31 31 3";    // Header me display hone wala format
+  const PHONE_NUMBER = "1234567890";          // Dialing number (bina space ke)
+  const PHONE_DISPLAY = "12 34 56 78 90";    // Header me display hone wala format
 
   // Sync phone number across all call links & badges
   const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
