@@ -1,6 +1,5 @@
-/* ============================================================
-   XTRA TIME HERBS - OPTIMIZED STYLESHEET
-   ============================================================ */
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap');
 
 /* CSS Variables */
 :root {
@@ -78,7 +77,6 @@ img {
 /* Pulse / Blnk Animation */
 .blnk {
   animation: blnk 2s infinite ease-in-out;
-  will-change: transform;
 }
 
 @keyframes blnk {
@@ -190,7 +188,7 @@ img {
   display: flex;
   width: max-content;
   animation: marquee-scroll 25s linear infinite;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .marquee-item {
@@ -683,86 +681,11 @@ img {
   border-radius: 16px;
 }
 
-
-/* ============================================================
-   10.5 FAQ SECTION
-   ============================================================ */
-.faq-section {
-  padding: 30px 0;
-  content-visibility: auto;
-  contain-intrinsic-size: 500px;
-}
-
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  border-radius: 16px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.faq-question {
-  width: 100%;
-  padding: 18px 22px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: none;
-  border: none;
-  color: #FFFFFF;
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 600;
-  text-align: left;
-  cursor: pointer;
-  gap: 16px;
-  transition: color 0.2s ease;
-}
-
-.faq-question:hover {
-  color: var(--color-gold);
-}
-
-.faq-icon {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-  fill: var(--color-gold);
-}
-
-.faq-item.active .faq-icon {
-  transform: rotate(180deg);
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease-out, padding 0.35s ease;
-  padding: 0 22px;
-  font-size: 0.98rem;
-  color: var(--color-text-muted);
-  line-height: 1.65;
-}
-
-.faq-item.active .faq-answer {
-  max-height: 250px;
-  padding: 0 22px 18px 22px;
-}
-
 /* ============================================================
    11. CUSTOMER REVIEWS SECTION
    ============================================================ */
 .reviews-section {
   padding: 30px 0;
-  content-visibility: auto;
-  contain-intrinsic-size: 900px;
 }
 
 .reviews-summary-card {
@@ -879,12 +802,12 @@ img {
 .review-user-header {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .review-avatar {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid var(--color-gold);
@@ -898,7 +821,7 @@ img {
 }
 
 .review-user-meta h4 {
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: #FFFFFF;
   margin-bottom: 2px;
@@ -908,30 +831,25 @@ img {
   display: flex;
   gap: 2px;
   color: var(--color-gold);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .review-photo-wrap {
   border-radius: 12px;
   overflow: hidden;
-  width: 100%;
+  max-height: 280px;
 }
 
 .review-photo-wrap img {
   width: 100%;
-  height: auto;
-  max-height: 280px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 10px;
-  display: block;
 }
 
 .review-comment {
-  font-size: 0.96rem;
+  font-size: 0.98rem;
   color: #E2E2E2;
-  line-height: 1.55;
-  margin: 0;
-  word-break: break-word;
+  line-height: 1.6;
 }
 
 /* ============================================================
@@ -977,7 +895,6 @@ img {
   animation: ring 1.5s ease-in-out infinite;
   box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
   transition: transform 0.2s;
-  will-change: transform, box-shadow;
 }
 
 .call-btn:hover {

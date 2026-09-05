@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // XTRA TIME HERBS - MAIN INTERACTIVE SCRIPT
 // ============================================================
 
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Sync phone number across all call links & badges
   const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
   phoneLinks.forEach(link => {
-    link.setAttribute('href', `tel:${PHONE_NUMBER}`);
+    link.setAttribute('href', 	el:);
   });
 
   const headerPhoneBadge = document.querySelector('.top-header-phone-badge');
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentIndex = index;
 
     if (track) {
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      track.style.transform = 	ranslateX(-%);
     }
 
     dots.forEach((dot, i) => {
@@ -89,12 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoSlide();
   }
 
-  // Pause carousel on hover
+  // Pause carousel on hover & mobile touch swipe
   if (carouselContainer) {
     carouselContainer.addEventListener('mouseenter', stopAutoSlide);
     carouselContainer.addEventListener('mouseleave', startAutoSlide);
 
-    // Touch Swipe Support for Mobile
     let startX = 0;
     let endX = 0;
 
@@ -171,27 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
       closeModal();
-    }
-  });
-
-  // --- 4. FAQ ACCORDION LOGIC ---
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const questionBtn = item.querySelector('.faq-question');
-    if (questionBtn) {
-      questionBtn.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
-        // Close all other active items
-        faqItems.forEach(otherItem => {
-          if (otherItem !== item) {
-            otherItem.classList.remove('active');
-            const otherBtn = otherItem.querySelector('.faq-question');
-            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
-          }
-        });
-        item.classList.toggle('active', !isActive);
-        questionBtn.setAttribute('aria-expanded', String(!isActive));
-      });
     }
   });
 
