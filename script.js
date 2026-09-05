@@ -174,4 +174,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // --- 4. FAQ ACCORDION LOGIC ---
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    if (questionBtn) {
+      questionBtn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        // Close all other active items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+            const otherBtn = otherItem.querySelector('.faq-question');
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+        item.classList.toggle('active', !isActive);
+        questionBtn.setAttribute('aria-expanded', String(!isActive));
+      });
+    }
+  });
+
 });
